@@ -14,8 +14,8 @@ public class LoginController {
     }
 
     @RequestMapping(value = "/login", method = RequestMethod.POST)
-    public String handleLoginPostRequest(@RequestParam String name){
-        System.out.println(name);
+    public String handleLoginPostRequest(@RequestParam String username){
+        System.out.println(username);
         return "welcome";
     }
 }
