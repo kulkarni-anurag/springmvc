@@ -20,7 +20,7 @@
     <div class="container">
         <h2 class="text-center mt-3">Login Form</h2>
         <br />
-        <form action="/springmvc/login" method="post" role="form">
+        <form action="/springmvc/spring-mvc/login" method="post" role="form">
             <div class="form-group" id="err">${err_msg}</div>
             <div class="form-group">
                 <label for="username">Username:</label>
