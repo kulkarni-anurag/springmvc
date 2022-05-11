@@ -11,4 +11,9 @@ public class LoginController {
     public String showLoginPage(){
         return "login";
     }
+
+    @RequestMapping(value = "/login", method = RequestMethod.POST)
+    public String handleLoginPostRequest(){
+        return "welcome";
+    }
 }
