@@ -2,9 +2,6 @@ package com.anurag.springmvc.todo;
 
 import java.util.Date;
 
-import org.springframework.stereotype.Component;
-
-@Component
 public class Todo {
     private int id;
     private String user;
