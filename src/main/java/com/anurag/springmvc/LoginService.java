@@ -1,4 +1,4 @@
-package com.anurag.servlets;
+package com.anurag.springmvc;
 
 public class LoginService {
     public boolean validateUser(String username, String password){
