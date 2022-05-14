@@ -19,6 +19,8 @@
         <br />
         <p>Your todos are:</p>
         <p>${todos}</p>
+        <br />
+        <a href="/springmvc/addtodo" class="btn btn-info">Add Todo</a>
     </div>
 </body>
 </html>
