@@ -19,4 +19,9 @@ public class TodoController {
         model.addAttribute("todos", service.retrieveTodos("virat"));
         return "list-todos";
     }
+
+    @RequestMapping(value = "/addtodo", method = RequestMethod.GET)
+    public String addTodoPage(){
+        return "todo";
+    }
 }
