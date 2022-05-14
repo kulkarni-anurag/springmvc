@@ -13,7 +13,7 @@
 </head>
 <body>
     <div class="container">
-        <h2 class="text-center mt-3">Welcome ${username} your password is ${password}</h2>
+        <h2 class="text-center mt-3">Welcome ${username}</h2>
         <br />
         <p>Now you can <a href="/springmvc/list-todos">manage your todos</a></p>
     </div>

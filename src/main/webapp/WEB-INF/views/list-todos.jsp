@@ -15,6 +15,8 @@
     <div class="container">
         <h2 class="text-center mt-3">Todo Page</h2>
         <br />
+        <h4>Hi ${username}</h4>
+        <br />
         <p>Your todos are:</p>
         <p>${todos}</p>
     </div>
