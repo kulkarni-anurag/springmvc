@@ -39,7 +39,7 @@
                         <td>${todo.user}</td>
                         <td>${todo.targetDate}</td>
                         <td>${todo.done}</td>
-                        <td><a href="#" class="btn btn-danger">Delete</a></td>
+                        <td><a href="/springmvc/delete-todo?id=${todo.id}" class="btn btn-danger">Delete</a></td>
                     </tr>
                 </c:forEach>
             </tbody>
