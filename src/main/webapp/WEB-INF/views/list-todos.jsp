@@ -22,11 +22,11 @@
             <caption>Your todos are</caption>
             <thead>
                 <tr>
-                    <td>Id</td>
-                    <td>Description</td>
-                    <td>User</td>
-                    <td>Target Date</td>
-                    <td>Is Completed</td>
+                    <th>Id</th>
+                    <th>Description</th>
+                    <th>User</th>
+                    <th>Target Date</th>
+                    <th>Is Completed</th>
                 </tr>
             </thead>
             <tbody>
