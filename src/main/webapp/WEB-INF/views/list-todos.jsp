@@ -19,7 +19,12 @@
         <h4>Hi ${username}</h4>
         <br />
         <p>Your todos are:</p>
-        <p>${todos}</p>
+        <br />
+        <!-- for(Todo todo : todos) -->
+        <c:forEach items="${todos}" var="todo">
+            ${todo.id} ${todo.desc} ${todo.user}
+            <br />
+        </c:forEach>
         <br />
         <a href="/springmvc/addtodo" class="btn btn-info">Add Todo</a>
     </div>
