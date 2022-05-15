@@ -18,13 +18,30 @@
         <br />
         <h4>Hi ${username}</h4>
         <br />
-        <p>Your todos are:</p>
-        <br />
-        <!-- for(Todo todo : todos) -->
-        <c:forEach items="${todos}" var="todo">
-            ${todo.id} ${todo.desc} ${todo.user}
-            <br />
-        </c:forEach>
+        <table class="table">
+            <caption>Your todos are</caption>
+            <thead>
+                <tr>
+                    <td>Id</td>
+                    <td>Description</td>
+                    <td>User</td>
+                    <td>Target Date</td>
+                    <td>Is Completed</td>
+                </tr>
+            </thead>
+            <tbody>
+                <!-- for(Todo todo : todos) -->
+                <c:forEach items="${todos}" var="todo">
+                    <tr>
+                        <td>${todo.id}</td>
+                        <td>${todo.desc}</td>
+                        <td>${todo.user}</td>
+                        <td>${todo.targetDate}</td>
+                        <td>${todo.done}</td>
+                    </tr>
+                </c:forEach>
+            </tbody>
+        </table>
         <br />
         <a href="/springmvc/addtodo" class="btn btn-info">Add Todo</a>
     </div>
