@@ -27,6 +27,7 @@
                     <th>User</th>
                     <th>Target Date</th>
                     <th>Is Completed</th>
+                    <th>Delete</th>
                 </tr>
             </thead>
             <tbody>
@@ -38,6 +39,7 @@
                         <td>${todo.user}</td>
                         <td>${todo.targetDate}</td>
                         <td>${todo.done}</td>
+                        <td><a href="#" class="btn btn-danger">Delete</a></td>
                     </tr>
                 </c:forEach>
             </tbody>
