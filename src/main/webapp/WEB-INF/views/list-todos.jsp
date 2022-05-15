@@ -18,7 +18,7 @@
         <br />
         <h4>Hi ${username}</h4>
         <br />
-        <table class="table">
+        <table class="table table-bordered table-striped">
             <caption>Your todos are</caption>
             <thead>
                 <tr>
