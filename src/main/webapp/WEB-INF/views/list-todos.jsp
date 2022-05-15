@@ -44,8 +44,9 @@
                 </c:forEach>
             </tbody>
         </table>
-        <br />
         <a href="/springmvc/addtodo" class="btn btn-info">Add Todo</a>
+        <br />
+        <br />
     </div>
 </body>
 </html>

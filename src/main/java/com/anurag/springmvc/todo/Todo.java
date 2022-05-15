@@ -2,17 +2,23 @@ package com.anurag.springmvc.todo;
 
 import java.util.Date;
 
+import jakarta.validation.constraints.Size;
+
 public class Todo {
     private int id;
     private String user;
+
+    @Size(min = 6, message = "Enter at least 6 characters")
     private String desc;
     private Date targetDate;
     private boolean isDone;
 
     public Todo() {
+        super();
     }
 
     public Todo(int id, String user, String desc, Date targetDate, boolean isDone) {
+        super();
         this.id = id;
         this.user = user;
         this.desc = desc;

@@ -22,6 +22,9 @@
                 <form:input type="text" class="form-control" path="desc" placeholder="Enter Todo Description" required="required" />
             </div>
             <div class="form-group">
+                <form:errors path="desc" cssClass="text-warning" />
+            </div>
+            <div class="form-group">
                 <button type="submit" class="btn btn-success">Add</button>
             </div>
         </form:form>

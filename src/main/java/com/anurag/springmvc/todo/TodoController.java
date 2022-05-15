@@ -34,7 +34,8 @@ public class TodoController {
     @RequestMapping(value = "/addtodo", method = RequestMethod.POST)
     public String handleAddTodo(@ModelAttribute("todo") Todo todo, BindingResult result, ModelMap model){
         if(result.hasErrors()){
-            System.out.println("error");
+            System.out.println(result);
+            return "todo";
         }
         service.addTodo((String) model.get("username"), todo.getDesc(), new Date(), false);
         model.clear();
