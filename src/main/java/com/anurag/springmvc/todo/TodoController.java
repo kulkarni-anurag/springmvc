@@ -5,6 +5,8 @@ import java.util.Date;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
+import org.springframework.validation.BindingResult;
+import org.springframework.web.bind.annotation.ModelAttribute;
 import org.springframework.web.bind.annotation.RequestMapping;
 import org.springframework.web.bind.annotation.RequestMethod;
 import org.springframework.web.bind.annotation.RequestParam;
@@ -24,13 +26,17 @@ public class TodoController {
     }
 
     @RequestMapping(value = "/addtodo", method = RequestMethod.GET)
-    public String addTodoPage(){
+    public String addTodoPage(ModelMap model){
+        model.addAttribute("todo", new Todo());
         return "todo";
     }
 
     @RequestMapping(value = "/addtodo", method = RequestMethod.POST)
-    public String handleAddTodo(@RequestParam String desc, ModelMap model){
-        service.addTodo("virat", desc, new Date(), false);
+    public String handleAddTodo(@ModelAttribute("todo") Todo todo, BindingResult result, ModelMap model){
+        if(result.hasErrors()){
+            System.out.println("error");
+        }
+        service.addTodo((String) model.get("username"), todo.getDesc(), new Date(), false);
         model.clear();
         return "redirect:list-todos";
     }

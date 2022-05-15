@@ -1,4 +1,5 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
+<%@taglib uri="http://www.springframework.org/tags/form" prefix="form"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -15,15 +16,15 @@
     <div class="container">
         <h2 class="text-center mt-3">Add a new Todo</h2>
         <br />
-        <form method="post" action="/springmvc/addtodo">
+        <form:form method="post" action="/springmvc/addtodo" modelAttribute="todo">
             <div class="form-group">
-                <label for="desc">Enter Todo Description</label>
-                <input type="text" class="form-control" name="desc" id="desc" placeholder="Enter Todo Description" />
+                <form:label path="desc">Enter Todo Description</form:label>
+                <form:input type="text" class="form-control" path="desc" placeholder="Enter Todo Description" required="required" />
             </div>
             <div class="form-group">
                 <button type="submit" class="btn btn-success">Add</button>
             </div>
-        </form>
+        </form:form>
     </div>
 </body>
 </html>
