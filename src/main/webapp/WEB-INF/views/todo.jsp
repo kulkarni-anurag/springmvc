@@ -13,13 +13,24 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <%@ include file="common/navbar.jspf" %>
     <div class="container">
         <h2 class="text-center mt-3">Add a new Todo</h2>
         <br />
-        <form:form method="post" action="/springmvc/addtodo" modelAttribute="todo">
+        <form:form method="post" modelAttribute="todo">
+            <div class="form-group">
+                <form:hidden path="id" />
+            </div>
+            <div class="form-group">
+                <form:hidden path="user" />
+            </div>
             <div class="form-group">
                 <form:label path="desc">Enter Todo Description</form:label>
                 <form:input type="text" class="form-control" path="desc" placeholder="Enter Todo Description" required="required" />
+            </div>
+            <div class="form-group">
+                <form:label path="targetDate">Enter Target Date</form:label>
+                <form:input type="text" class="form-control" path="targetDate" placeholder="Enter Target Date" required="required" />
             </div>
             <div class="form-group">
                 <form:errors path="desc" cssClass="text-warning" />

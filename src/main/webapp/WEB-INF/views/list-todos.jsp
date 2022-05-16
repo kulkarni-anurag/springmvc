@@ -1,5 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
+<%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -13,6 +14,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"></script>
 </head>
 <body>
+    <%@ include file="common/navbar.jspf" %>
     <div class="container">
         <h2 class="text-center mt-3">Todo Page</h2>
         <br />
@@ -27,6 +29,7 @@
                     <th>User</th>
                     <th>Target Date</th>
                     <th>Is Completed</th>
+                    <th>Update</th>
                     <th>Delete</th>
                 </tr>
             </thead>
@@ -37,8 +40,9 @@
                         <td>${todo.id}</td>
                         <td>${todo.desc}</td>
                         <td>${todo.user}</td>
-                        <td>${todo.targetDate}</td>
+                        <td><fmt:formatDate pattern="dd/MM/yyyy" value="${todo.targetDate}" /></td>
                         <td>${todo.done}</td>
+                        <td><a href="/springmvc/update-todo?id=${todo.id}" class="btn btn-primary">Update</a></td>
                         <td><a href="/springmvc/delete-todo?id=${todo.id}" class="btn btn-danger">Delete</a></td>
                     </tr>
                 </c:forEach>
