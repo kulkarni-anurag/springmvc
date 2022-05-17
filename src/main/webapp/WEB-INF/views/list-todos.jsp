@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=UTF-8" pageEncoding="UTF-8" isELIgnored="false" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/core" prefix="c" %>
 <%@ taglib uri="http://java.sun.com/jsp/jstl/fmt" prefix="fmt" %>
+<%@taglib uri="http://www.springframework.org/tags" prefix="spring"%>
 <!DOCTYPE html>
 <html lang="en">
 <head>
@@ -21,7 +22,7 @@
         <h4>Hi ${username}</h4>
         <br />
         <table class="table table-bordered table-striped">
-            <caption>Your todos are</caption>
+            <caption><spring:message code="todo.caption" /></caption>
             <thead>
                 <tr>
                     <th>Id</th>
