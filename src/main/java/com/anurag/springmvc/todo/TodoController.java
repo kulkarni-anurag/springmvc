@@ -3,6 +3,8 @@ package com.anurag.springmvc.todo;
 import java.text.SimpleDateFormat;
 import java.util.Date;
 
+import javax.servlet.http.HttpServletRequest;
+
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.beans.propertyeditors.CustomDateEditor;
 import org.springframework.security.core.context.SecurityContextHolder;
@@ -11,6 +13,7 @@ import org.springframework.stereotype.Controller;
 import org.springframework.ui.ModelMap;
 import org.springframework.validation.BindingResult;
 import org.springframework.web.bind.WebDataBinder;
+import org.springframework.web.bind.annotation.ExceptionHandler;
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.InitBinder;
 import org.springframework.web.bind.annotation.ModelAttribute;
@@ -54,6 +57,11 @@ public class TodoController {
         throw new RuntimeException("Dummy Exception");
         /*model.addAttribute("todo", new Todo());
         return "todo";*/
+    }
+
+    @ExceptionHandler(value = Exception.class)
+    public String handleException(HttpServletRequest request, Exception exception){
+        return "error-specific";
     }
 
     @RequestMapping(value = "/addtodo", method = RequestMethod.POST)

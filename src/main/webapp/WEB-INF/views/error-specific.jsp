@@ -13,7 +13,8 @@
 </head>
 <body>
     <div class="container">
-        <h2 class="mt-4">Application has encountered an error!</h2>
+        <h2 class="text-center mt-4">Application has encountered an error!</h2>
+        <p>Specific Error</p>
     </div>
 </body>
 </html>
